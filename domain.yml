@@ -1,16 +1,10 @@
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
   - booking
-  - cleaning
   - book+room_no
   - room_no
-  - choose
   # - time
-  - clean+time
-  - immediate
   - checkin
   - checkout
   - cancelreservation
@@ -28,13 +22,6 @@ slots:
     type: text
     mappings:
     - type: custom
-  room_type:
-    type: categorical
-    values:
-    - Deluxe
-    - Simple
-    mappings:
-    - type: custom
   number_of_hours:
     type: text
     mappings:
@@ -43,9 +30,6 @@ actions:
 - utter_greet
 - utter_enquiry_room_no
 - utter_enquiry_room_type
-- utter_confirmation
-- utter_ask_time
-- utter_cleaning_confirm
 - utter_done
 - action_relative
 - utter_checkin
@@ -60,28 +44,14 @@ actions:
 responses:
   utter_greet:
   - text: "Hey! I'm there for hotel service"
-
   utter_enquiry_room_no:
   - text: "How many rooms would you like to book?"
-
   utter_enquiry_room_type:
   - text: "What type  of rooms would you want to book?"
-    buttons:
-    - title: "Deluxe"
-      payload: '/choose{"room_type": "Deluxe"}'
-    - title: "Simple"
-      payload: '/choose{"room_type": "Simple"}'
-
-  utter_confirmation:
-    - text: "You have chosen to book {number_of_rooms} {room_type} rooms. Confirm?"
-  utter_ask_time:
-    - text: "When should I arrange for a cleaning?"
-  utter_cleaning_confirm:
-    - text: "Sure, I will send someone to your room right away."
   utter_done:
   - text: "Booked Successfully!"
   utter_checkin:
-  - text: "Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact the reception for early check-in requests. "  
+  - text: "Check-in time starts at 4 PM. Please contact the reception for early check-in requests. "  
   utter_checkout:
   - text: "Check-out time is 11 AM. Please contact the reception for late checkout requests. "
   utter_cancelreservation:

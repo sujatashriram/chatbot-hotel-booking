@@ -1,5 +1,13 @@
 version: '3.1'
 nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
   - intent: booking
     examples: |
       - book rooms
@@ -12,20 +20,15 @@ nlu:
       - I want to book a room for my stay
   - intent: book+room_no
     examples: |
-      - I want to book [6](number_of_rooms) rooms for my holidays
-      - book [4](number_of_rooms) rooms
-      - [4](number_of_rooms) rooms booking
-      - I m looking for [1](number_of_rooms) room
-      - I need to do a booking for [2](number_of_rooms) rooms
-  - intent: immediate
+      - I want to book 6 rooms for my holidays
+      - book 4 rooms
+      - 4 rooms booking
+      - I m looking for 1 room
+      - I need to do a booking for 2 rooms
+  - intent: room_no
     examples: |
-      - Send the cleaner immediately
-      - send someone right now
-      - Can you send someone right now
-      - Send someone fast
-      - Get this clean now
-      - Clean the room right now
-      - Its too dirty clean it right away
+      -[3](number_of_rooms)
+      -[2](number_of_rooms) rooms
   - intent: checkin
     examples: |
       - What are your check-in timings?
@@ -33,12 +36,6 @@ nlu:
       - When can I check in ?
       - Give me some details regarding check-in?
       - Any rules regarding check-in ?
-  - intent: clean+time
-    examples: |
-      - Clean my room in [3](number_of_hours) hours
-      - I want to schedule cleaning of my room in [3](number_of_hours) hours
-      - Please send someone to clean my room in [3](number_of_hours) hour
-      - I am looking to get my room cleaned in [5](number_of_hours)
   - intent: checkout
     examples: |
       - What are your check-out timings?
@@ -74,35 +71,11 @@ nlu:
       - When is  breakfast timings ?
   - intent: restauranttimings
     examples: |
-      - What are the timings of your restaurant?
       - tell restaurant timings .
       - any restaurant timings.
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - good morning
-      - good evening
-      - hey there
   - intent: goodbye
     examples: |
       - bye
       - goodbye
       - see you around
       - see you later
-  - intent: affirm
-    examples: |
-      - yes
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-  - intent: deny
-    examples: |
-      - no
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really

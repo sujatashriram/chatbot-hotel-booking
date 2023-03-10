@@ -7,8 +7,6 @@ stories:
       - intent: booking
       - action: utter_enquiry_room_no
       - intent: room_no
-      - action: utter_enquiry_room_type
-      - intent: affirm
       - action: utter_done
   - story: Story path 2
     steps:
@@ -17,41 +15,27 @@ stories:
       - intent: booking
       - action: utter_enquiry_room_no
       - intent: room_no
-      - action: utter_enquiry_room_type
+      - action: utter_done
   - story: Story path 3
     steps:
       - intent: greet
       - action: utter_greet
       - intent: book+room_no
-      - action: utter_enquiry_room_type
-      - intent: affirm
       - action: utter_done
   - story: Story path 4
     steps:
       - intent: greet
       - action: utter_greet
       - intent: book+room_no
-      - action: utter_enquiry_room_type
-      - intent: affirm
       - action: utter_done
   - story: Story path 5
     steps:
       - intent: greet
       - action: utter_greet
-      - intent: cleaning
-      - action: utter_ask_time
-      - intent: clean+time
-      - action: action_relative
-      - intent: affirm
-      - action: utter_done
   - story: Story path 6
     steps:
       - intent: greet
       - action: utter_greet
-      - intent: cleaning
-      - action: utter_cleaning_confirm
-      - intent: affirm
-      - action: utter_done
   - story: Story path 7
     steps:
       - intent: checkin
